@@ -1,0 +1,116 @@
+.container-fluid{background-color: hsla(147, 100%, 96%, 1); text-align: center;}
+#errorFlagsColor {background-color: hsla(114, 100%, 66%, 1); border-radius: 10px;}
+#warningColor {background-color: hsla(114, 100%, 66%, 1); border-radius: 30px;}
+#warningColorL {background-color: hsla(114, 100%, 66%, 1); border-radius: 30px;}
+#limitFlagsColor {background-color: hsla(114, 100%, 66%, 1); border-radius: 10px;}
+#errorFlagsText { text-align: center;}
+#warningText { text-align: center;}
+#warningTextL { text-align: center;}
+#limitFlagsText { text-align: center;}
+#btn-primary {background-color:hsla(212, 70%, 51%, 0.74);}
+.thumbnail {border-radius: 20px;}
+#btnStart {background-color: rgba(64, 206, 48, 0.87);}
+#btnStop{background-color:hsla(0, 77%, 63%, 0.94);}
+svg{background-color: hsla(0, 77%, 63%, 0.94);}
+        .unselectable {
+            -moz-user-select: -moz-none;
+            -khtml-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        /* css formats for the gauge */
+        .gauge1 .domain {
+            stroke-width: 2px;
+            stroke: #fff;
+        }
+
+        .gauge1 .tick line {
+            stroke: #fff;
+            stroke-width: 2px;
+        }
+        
+        .gauge1 line {
+            stroke: #fff;
+        }
+
+        .gauge1 .arc, .gauge .cursor {
+            opacity: 0;
+        }
+
+        .gauge1 .major {
+            fill: #fff;
+            font-size: 20px;
+            font-family: 'Play', verdana, sans-serif;
+            font-weight: normal;
+        }
+        
+        .gauge1 .indicator {
+            stroke: #EE3311;
+            fill: #000;
+            stroke-width: 4px;
+        }
+
+        /* css formats for the segment display */
+        .segdisplay .on {
+            fill: #00FFFF;
+
+        }
+
+        .segdisplay .off {
+            fill: #00FFFF;
+            opacity: 0.15;
+        }
+         body {
+            font: 16px arial;
+            background-color: #515151;
+        }
+
+        .unselectable {
+            -moz-user-select: -moz-none;
+            -khtml-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        .lineargauge {
+            font-size: 12px;
+        }
+
+        .lineargauge .axis path,
+        .lineargauge .axis line {
+            fill: none;
+            stroke: #ddd;
+        }
+
+        .lineargauge .lane, .lineargauge .cursor {
+            opacity: 0;
+        }
+
+        .lineargauge .tick {
+            fill: #ddd;
+        }
+
+        .lineargauge .major {
+            stroke-width: 2;
+        }
+
+        .lineargauge .ok {
+            fill: green;
+            opacity: 0.8;
+        }
+
+        .lineargauge .warning {
+            fill: yellow;
+            opacity: 0.8;
+        }
+
+        .lineargauge .fault {
+            fill: red;
+            opacity: 0.8;
+        }
+       button {
+    width: 20em;  height: 2em;
+}

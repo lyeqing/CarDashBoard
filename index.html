@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{title}}</title>
+      <!-- Latest compiled and minified CSS -->
+      <meta http-equiv="content-type" content="text/html;charset=utf-8">
+<meta charset="utf-8">
+  <meta name="viewport" content="width=320" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+      <link rel="stylesheet" href="stylesheets/font-awesome-4.6.3/css/font-awesome.min.css">
+<link rel="stylesheet" href="css.css">
+
+      <link rel='stylesheet' href='/stylesheets/style.css' /> 
+        
+        <script
+            src="https://code.jquery.com/jquery-1.12.4.min.js"
+            integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+            crossorigin="anonymous"></script>
+<script type="text/javascript" src="http://iop.io/js/vendor/d3.v3.min.js"></script>
+    <script type="text/javascript" src="http://iop.io/js/vendor/polymer/PointerEvents/pointerevents.js"></script>
+    <script type="text/javascript" src="http://iop.io/js/vendor/polymer/PointerGestures/pointergestures.js"></script>
+    <script type="text/javascript" src="http://iop.io/js/iopctrl.js"></script>
+
+
+
+            <script src="https://d3js.org/d3.v4.min.js"></script>
+            <script type="text/javascript" src="http://d3js.org/d3.v2.min.js"></script>
+
+            <script type="text/javascript" src="http://mbostock.github.com/d3/d3.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="start9.js"></script>
+<script src="stop.js"></script>
+
+    
+  </head>
+  <body>
+  
+  <div class="container-fluid">
+     <div class="row">
+        
+
+            <div class="col-sm-4 col-md-4" id="errorFlagsColor">
+                
+                    
+                   
+                        <h4 id="errorFlagsText">Error Flags Green</h4>
+        
+                
+            </div>
+            <div class="col-sm-2 col-md-2" id="warningColor">
+                
+                    
+                    
+                        <h4 id="warningText">Error Warning Light</h4>
+                        
+                        
+                </div>
+                <div class="col-sm-2 col-md-2" id="warningColorL">
+                
+                    
+                    
+                        <h4 id="warningTextL">Limit Warning Light</h4>
+                        
+                        
+                </div>
+            
+            <div class="col-sm-4 col-md-4" id="limitFlagsColor">
+                
+                    
+                    
+                        <h4 id="limitFlagsText"> Limit Flags green</h4>
+                        
+                         
+                </div>
+            
+        </div>
+    
+
+<div class="row">
+         <div class="col-sm-4 col-md-4" >
+                
+                    
+                    
+                        
+                        <h6><b id="rpmGaugeContainer1">RPM</b></h6>
+                      <div id="rpmGaugeContainer"> </div>
+                      
+                        
+                        <h6><b id="ahrDCGaugeContainer1">DC Bus (AHR)</b></h6>
+                        <div id="ahrDCGaugeContainer"> </div>
+
+                <h6><b id="voltageGaugeContaine1">Pack Voltage (V)</b></h6>
+                        <div id="voltageGaugeContaine"> </div>
+
+
+                        <h6><b id="chargeGaugeContainer1">Pack State of Charge (%)</b></h6>
+                        <div id="chargeGaugeContainer"> </div>
+                        
+                        
+                        
+                         
+                </div>
+            
+        
+   
+
+           
+            <div class="col-sm-4 col-md-4">
+                
+                    </br>
+                    </br>
+           
+                        <span id="speedometer"></span>
+                         
+                
+            </div>
+
+<div class="col-sm-4 col-md-4" >
+                
+                    
+                    
+                        
+                        <h6><b id="cMotorGaugeContainer1">Motor Temp (C)</b></h6>
+                      <div id="cMotorGaugeContainer"> </div>
+                      
+                        
+                        <h6><b id="cHeatsinkGaugeContainer1">heatsink temp (C)</b></h6>
+                        <div id="cHeatsinkGaugeContainer"> </div>
+
+                <h6><b id="cBatteryGaugeContainer1">Battery Heatsink Temperature (C)</b></h6>
+                        <div id="cBatteryGaugeContainer"> </div>
+
+
+                        <h6><b id="ahrPackGaugeContainer1">Pack AmpHours (AHR)</b></h6>
+                        <div id="ahrPackGaugeContainer"> </div>
+                        
+                        
+                        
+                         
+                </div>
+
+
+            
+    
+       <div class="row">
+        
+<div class="col-sm-3 col-md-3"  class="span3 offset1">
+                
+                      <div  id = "time1"> <label>Speed Control:&nbsp;&nbsp;</label><input type = "text" id = "control" value = "1" size="4"/>
+                                                  </div>  
+                
+            </div>
+            <div class="col-sm-3 col-md-3">
+                
+                       
+                         
+                 <div>        <button id = "btn-primary" class = "btn-primary" onclick="start()"> START</button>
+                                                  
+                
+            </div>
+           </div>
+            
+            <div class="col-sm-3 col-md-3">
+                
+                   <div>   <button id = "btnStop" class = "btn-primary" onclick="stop()">STOP</button>
+                                                  </div>
+                   
+            </div></div>
+            <div class="col-sm-3 col-md-3">
+                
+               <div>  <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Count:&nbsp;&nbsp;</label><input type = "text" id = "time" value = "0" size="4"/>
+                 </div>                                      
+                    
+            </div>
+            
+        
+    
+
+  </div>
+ 
+ <script src="d3js.js"></script>
+
+
+  </body>
+</html>
